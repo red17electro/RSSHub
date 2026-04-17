@@ -5290,18 +5290,16 @@
   },
   "android.com": {
     "_name": "Android",
-    "developer": [
+    "source": [
       {
-        "title": "SDK Platform Tools release notes",
+        "title": "Pixel Update Bulletins",
         "docs": "https://docs.rsshub.app/routes/program-update",
         "source": [
-          "/studio/releases/platform-tools",
+          "/docs/security/bulletin/pixel",
           "/"
         ],
-        "target": "/android/platform-tools-releases"
-      }
-    ],
-    "source": [
+        "target": "/android/pixel-update-bulletin"
+      },
       {
         "title": "Security Bulletins",
         "docs": "https://docs.rsshub.app/routes/program-update",
@@ -5311,6 +5309,17 @@
           "/"
         ],
         "target": "/android/security-bulletin"
+      }
+    ],
+    "developer": [
+      {
+        "title": "SDK Platform Tools release notes",
+        "docs": "https://docs.rsshub.app/routes/program-update",
+        "source": [
+          "/studio/releases/platform-tools",
+          "/"
+        ],
+        "target": "/android/platform-tools-releases"
       }
     ]
   },
@@ -6198,7 +6207,7 @@
     ".": [
       {
         "title": "News",
-        "docs": "https://docs.rsshub.app/routes/other",
+        "docs": "https://docs.rsshub.app/routes/sport",
         "source": [
           "/"
         ],
@@ -8427,6 +8436,27 @@
       }
     ]
   },
+  "caicai.me": {
+    "_name": "CaiCai",
+    "www": [
+      {
+        "title": "Blog",
+        "docs": "https://docs.rsshub.app/routes/blog",
+        "source": [
+          "/blogs"
+        ],
+        "target": "/caicai/blog/:lang?"
+      },
+      {
+        "title": "Blog",
+        "docs": "https://docs.rsshub.app/routes/blog",
+        "source": [
+          "/zh/blogs"
+        ],
+        "target": "/caicai/blog/zh"
+      }
+    ]
+  },
   "caijing.com.cn": {
     "_name": "财经网",
     "roll": [
@@ -8820,6 +8850,19 @@
           "/"
         ],
         "target": "/castanet/"
+      }
+    ]
+  },
+  "castbox.fm": {
+    "_name": "Castbox",
+    ".": [
+      {
+        "title": "Channels",
+        "docs": "https://docs.rsshub.app/routes/multimedia",
+        "source": [
+          "/channel/:channel"
+        ],
+        "target": "/castbox/channel/:channel"
       }
     ]
   },
@@ -15084,7 +15127,7 @@
     "www": [
       {
         "title": "早报",
-        "docs": "https://docs.rsshub.app/routes/new-media",
+        "docs": "https://docs.rsshub.app/routes/sport",
         "source": [
           "/special/48"
         ],
@@ -15092,7 +15135,7 @@
       },
       {
         "title": "足球赛果",
-        "docs": "https://docs.rsshub.app/routes/new-media",
+        "docs": "https://docs.rsshub.app/routes/sport",
         "source": [
           "/team/*team"
         ],
@@ -15100,7 +15143,7 @@
       },
       {
         "title": "球员新闻",
-        "docs": "https://docs.rsshub.app/routes/new-media",
+        "docs": "https://docs.rsshub.app/routes/sport",
         "source": [
           "/player/*id"
         ],
@@ -15108,7 +15151,7 @@
       },
       {
         "title": "专题",
-        "docs": "https://docs.rsshub.app/routes/new-media",
+        "docs": "https://docs.rsshub.app/routes/sport",
         "source": [
           "/special/:id"
         ],
@@ -15116,7 +15159,7 @@
       },
       {
         "title": "球队新闻",
-        "docs": "https://docs.rsshub.app/routes/new-media",
+        "docs": "https://docs.rsshub.app/routes/sport",
         "source": [
           "/team/*team"
         ],
@@ -15126,7 +15169,7 @@
     "m": [
       {
         "title": "新闻",
-        "docs": "https://docs.rsshub.app/routes/new-media",
+        "docs": "https://docs.rsshub.app/routes/sport",
         "source": [
           "/home/:id"
         ],
@@ -16846,7 +16889,7 @@
     ".": [
       {
         "title": "News",
-        "docs": "https://docs.rsshub.app/routes/new-media",
+        "docs": "https://docs.rsshub.app/routes/sport",
         "source": [
           "/:language/news",
           "/:language"
@@ -16860,7 +16903,7 @@
     "www": [
       {
         "title": "News",
-        "docs": "https://docs.rsshub.app/routes/new-media",
+        "docs": "https://docs.rsshub.app/routes/sport",
         "source": [
           "/news",
           "/"
@@ -17599,7 +17642,7 @@
     ".": [
       {
         "title": "最新消息",
-        "docs": "https://docs.rsshub.app/routes/other",
+        "docs": "https://docs.rsshub.app/routes/game",
         "source": [
           "/"
         ],
@@ -28563,7 +28606,7 @@
     ".": [
       {
         "title": "Fil Info Le Phocéen (Chrono)",
-        "docs": "https://docs.rsshub.app/routes/new-media",
+        "docs": "https://docs.rsshub.app/routes/sport",
         "source": [
           "/chrono"
         ],
@@ -34141,7 +34184,7 @@
           "/:category",
           "/"
         ],
-        "target": "/nikkeiparams=>{if(params.category&&params.type){return`/nikkei/cn/cn/${params.category}/${params.type.replace(\".html\",\"\")}`}else if(params.category&&!params.type){return`/nikkei/cn/cn/${params.category.replace(\".html\",\"\")}`}else{return`/nikkei/cn/cn`}}"
+        "target": "/nikkeiparams=>{if(params.category&&params.type){return`/nikkei/cn/cn/${params.category}/${params.type.replace(\".html\",\"\")}`}else if(params.category&&!params.type){return`/nikkei/cn/cn/${params.category.replace(\".html\",\"\")}`}else{return\"/nikkei/cn/cn\"}}"
       }
     ],
     "zh.cn": [
@@ -34153,7 +34196,7 @@
           "/:category",
           "/"
         ],
-        "target": "/nikkeiparams=>{if(params.category&&params.type){return`/nikkei/cn/zh/${params.category}/${params.type.replace(\".html\",\"\")}`}else if(params.category&&!params.type){return`/nikkei/cn/zh/${params.category.replace(\".html\",\"\")}`}else{return`/nikkei/cn/zh`}}"
+        "target": "/nikkeiparams=>{if(params.category&&params.type){return`/nikkei/cn/zh/${params.category}/${params.type.replace(\".html\",\"\")}`}else if(params.category&&!params.type){return`/nikkei/cn/zh/${params.category.replace(\".html\",\"\")}`}else{return\"/nikkei/cn/zh\"}}"
       }
     ],
     "www": [
@@ -40374,16 +40417,16 @@
       }
     ]
   },
-  "runtrail.cn": {
+  "runyeah.world": {
     "_name": "跑野大爆炸",
     ".": [
       {
-        "title": "Unknown",
-        "docs": "https://docs.rsshub.app/routes/other",
+        "title": "最新文章",
+        "docs": "https://docs.rsshub.app/routes/sport",
         "source": [
           "/"
         ],
-        "target": "/runtrail/"
+        "target": "/runyeah/"
       }
     ]
   },
@@ -48057,7 +48100,7 @@
     ".": [
       {
         "title": "News",
-        "docs": "https://docs.rsshub.app/routes/other",
+        "docs": "https://docs.rsshub.app/routes/sport",
         "source": [
           "/news/",
           "/"

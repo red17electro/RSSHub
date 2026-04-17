@@ -542,6 +542,9 @@
   "/amz123/kx": [
     "defp"
   ],
+  "/android/pixel-update-bulletin": [
+    "TonyRL"
+  ],
   "/android/platform-tools-releases": [
     "nczitzk"
   ],
@@ -1333,6 +1336,9 @@
   "/cahkms/:category?": [
     "nczitzk"
   ],
+  "/caicai/blog/:lang?": [
+    "TonyRL"
+  ],
   "/caijing/roll": [
     "TonyRL"
   ],
@@ -1419,6 +1425,9 @@
   ],
   "/castanet/:category?": [
     "TonyRL"
+  ],
+  "/castbox/channel/:channel": [
+    "ananyatimalsina"
   ],
   "/catti/news/:category": [
     "PrinOrange"
@@ -7402,7 +7411,7 @@
   "/ruc/hr/:category?": [
     "nczitzk"
   ],
-  "/runtrail/": [
+  "/runyeah/": [
     "TonyRL"
   ],
   "/rustcc/jobs": [
