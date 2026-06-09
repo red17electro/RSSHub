@@ -1,35 +1,35 @@
-import type { Browser } from 'rebrowser-puppeteer';
+import type { BrowserContext } from 'patchright';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 
-import puppeteer from '@/utils/puppeteer';
-import { constructCookieArray, getCookies, parseCookieArray, setCookies } from '@/utils/puppeteer-utils';
+import playwright from '@/utils/playwright';
+import { constructCookieArray, getCookies, parseCookieArray, setCookies } from '@/utils/playwright-utils';
 
-let browser: Browser | null = null;
+let context: BrowserContext | null = null;
 
 afterEach(async () => {
-    if (browser) {
-        await browser.close();
-        browser = null;
+    if (context) {
+        await context.close();
+        context = null;
     }
 
     vi.resetModules();
 });
 
-describe('puppeteer-utils', () => {
+describe('browser cookie utils', () => {
     const cookieArrayExampleCom = [
-        { name: 'foobar', value: '', domain: 'example.com' },
-        { name: 'foo', value: 'bar', domain: 'example.com' },
-        { name: 'baz', value: 'qux', domain: 'example.com' },
+        { name: 'foobar', value: '', domain: 'example.com', path: '/' },
+        { name: 'foo', value: 'bar', domain: 'example.com', path: '/' },
+        { name: 'baz', value: 'qux', domain: 'example.com', path: '/' },
     ];
     const cookieArraySubExampleCom = [
-        { name: 'barfoo', value: '', domain: 'sub.example.com' },
-        { name: 'bar', value: 'foo', domain: 'sub.example.com' },
-        { name: 'qux', value: 'baz', domain: 'sub.example.com' },
+        { name: 'barfoo', value: '', domain: 'sub.example.com', path: '/' },
+        { name: 'bar', value: 'foo', domain: 'sub.example.com', path: '/' },
+        { name: 'qux', value: 'baz', domain: 'sub.example.com', path: '/' },
     ];
     const cookieArrayRsshubTest = [
-        { name: '', value: 'rsshub', domain: 'rsshub.test' },
-        { name: 'rsshub', value: '', domain: 'rsshub.test' },
-        { name: 'test', value: 'rsshub', domain: 'rsshub.test' },
+        { name: '', value: 'rsshub', domain: 'rsshub.test', path: '/' },
+        { name: 'rsshub', value: '', domain: 'rsshub.test', path: '/' },
+        { name: 'test', value: 'rsshub', domain: 'rsshub.test', path: '/' },
     ];
     const cookieArrayAll = [...cookieArrayExampleCom, ...cookieArraySubExampleCom, ...cookieArrayRsshubTest];
 
@@ -69,8 +69,8 @@ describe('puppeteer-utils', () => {
     });
 
     it('getCookies httpbingo', async () => {
-        browser = await puppeteer();
-        const page = await browser.newPage();
+        context = await playwright();
+        const page = await context.newPage();
         await page.goto('https://httpbingo.org/cookies/set?foo=bar&baz=qux', {
             waitUntil: 'domcontentloaded',
         });
@@ -78,8 +78,8 @@ describe('puppeteer-utils', () => {
     }, 45000);
 
     it('setCookies httpbingo', async () => {
-        browser = await puppeteer();
-        const page = await browser.newPage();
+        context = await playwright();
+        const page = await context.newPage();
         // httpbingo.org cannot recognize cookies with empty name properly, so we cannot use cookieStrAll here
         await setCookies(page, cookieStrExampleCom, 'httpbingo.org');
         await page.goto('https://httpbingo.org/cookies', {
@@ -90,8 +90,8 @@ describe('puppeteer-utils', () => {
     }, 45000);
 
     it('setCookies & getCookies example.org', async () => {
-        browser = await puppeteer();
-        const page = await browser.newPage();
+        context = await playwright();
+        const page = await context.newPage();
         // we can use cookieStrAll here!
         await setCookies(page, cookieStrAll, 'example.org');
         await page.goto('https://example.org', {
