@@ -1877,6 +1877,7 @@ export type RoutePath =
   | `/jd/price/:id`
   | `/jetbrains/youtrack/comments/:issueId`
   | `/jewishmuseum/exhibitions`
+  | `/jfnet/industry-report`
   | `/jgsu/jwc`
   | `/jiangnan/jwc/:type?`
   | `/jianshu/collection/:id`
@@ -1929,6 +1930,7 @@ export type RoutePath =
   | `/jpxgmn/search/:kw`
   | `/jpxgmn/tab/:tab?`
   | `/jpxgmn/weekly`
+  | `/jreast/ridership/:year?`
   | `/jrj/:channelNum`
   | `/jseea/news/:type?`
   | `/jsu/cxzx/:types?`
@@ -2051,6 +2053,7 @@ export type RoutePath =
   | `/lfsyd/user/:id?`
   | `/lg/osaka/food-permit`
   | `/lg/tokyo/food-permit/:ward?`
+  | `/lg/tokyo/rail-ridership/:table?`
   | `/lhratings/research/:type?`
   | `/lianxh/:category?`
   | `/lifetimes/:category?`
@@ -3325,6 +3328,7 @@ export type RoutePath =
   | `/tmtpost/column/:id`
   | `/tmtpost/new`
   | `/tmtpost/nictation`
+  | `/toei/ridership`
   | `/tokeninsight/blog/:lang?`
   | `/tokeninsight/bulletin/:lang?`
   | `/tokeninsight/report/:lang?`
